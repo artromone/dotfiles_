@@ -1,0 +1,115 @@
+{
+   "layer":"top",
+   // "position":"bottom",
+   "modules-left":[
+      "sway/workspaces",
+      "sway/mode",
+      "sway/scratchpad"
+   ],
+   "modules-center":[
+      "sway/window",
+      "privacy"
+   ],
+   "modules-right":[
+      "sway/language",
+      "battery",
+      "clock",
+      "idle_inhibitor"
+   ],
+   "sway/mode":{
+      "format":"<span style=\"italic\">{}</span>"
+   },
+   "sway/scratchpad":{
+      "format":"{icon} {count}",
+      "show-empty":false,
+      "format-icons":[
+         "",
+         " "
+      ],
+      "tooltip":true,
+      "tooltip-format":"{app}: {title}"
+   },
+   "idle_inhibitor":{
+      "format":"{icon}",
+      "format-icons":{
+         "activated":"",
+         "deactivated":""
+      }
+   },
+   "clock":{
+      "format":"{:%H:%M}",
+      "format-alt":"{:%A, %B %d, %Y (%R)}",
+      "tooltip-format":"<tt><small>{calendar}</small></tt>",
+      "calendar":{
+         "mode":"year",
+         "mode-mon-col":3,
+         "weeks-pos":"left",
+         "on-scroll":1,
+         "format":{
+            "months":"<span color='#ffead3'><b>{}</b></span>",
+            "days":"<span color='#ecc6d9'><b>{}</b></span>",
+            "weeks":"<span color='#99ffdd'><b>W{}</b></span>",
+            "weekdays":"<span color='#ffcc66'><b>{}</b></span>",
+            "today":"<span color='#ff6699'><b><u>{}</u></b></span>"
+         }
+      },
+      "actions":{
+         "on-click-right":"mode",
+         "on-click-forward":"tz_up",
+         "on-click-backward":"tz_down",
+         "on-scroll-up":"shift_down",
+         "on-scroll-down":"shift_up"
+      }
+   },
+   "battery":{
+      "states":{
+         "good":95,
+         "warning":30,
+         "critical":15
+      },
+      "format":"{time}({capacity}%)",
+      "format-time":"{H}:{m}",
+      "format-full":"{capacity}%",
+      "format-charging":"{capacity}% ",
+      "format-plugged":"{capacity}% ",
+      "format-alt":"{icon} ",
+      "tooltip-format":"Health: {health}% | Draw: {power}W",
+      "format-good":"",
+      "format-full":"",
+      "format-icons":[
+         "",
+         "",
+         "",
+         "",
+         ""
+      ]
+   },
+   "sway/language":{
+      "format":"{}",
+      "min-length":2,
+      "on-click":"swaymsg 'input * xkb_switch_layout next'",
+      "tooltip":false
+   },
+   "privacy":{
+      "icon-spacing":4,
+      "icon-size":18,
+      "transition-duration":250,
+      "modules":[
+         {
+            "type":"screenshare",
+            "tooltip":true,
+            "tooltip-icon-size":24
+         },
+         {
+            "type":"audio-out",
+            "tooltip":true,
+            "tooltip-icon-size":24
+         },
+         {
+            "type":"audio-in",
+            "tooltip":true,
+            "tooltip-icon-size":24
+         }
+      ]
+   }
+}
