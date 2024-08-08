@@ -1,0 +1,136 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "final_space": true,
+  "blocks": [
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "background": "#8ec07c",
+          "foreground": "#504f4f",
+          "leading_diamond": "╭─",
+          "properties": {
+            "style": "folder"
+          },
+          "style": "diamond",
+          "template": "  {{ .Path  }} ",
+          "trailing_diamond": "",
+          "type": "path"
+        },
+        {
+          "foreground": "#8ec07c",
+          "style": "plain",
+          "template": " {{ .Name }}",
+          "type": "shell"
+        },
+        {
+          "foreground": "#b1b1b1",
+          "properties": {
+            "style": "roundrock",
+            "threshold": 0
+          },
+          "style": "plain",
+          "template": "   {{ .FormattedMs }}",
+          "type": "executiontime"
+        },
+        {
+          "foreground": "#ebdbb2",
+          "style": "powerline",
+          "properties": {
+            "branch_icon": " ",
+            "fetch_stash_count": true,
+            "fetch_upstream_icon": true
+          },
+          "template": "  {{ .HEAD }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}",
+          "type": "git"
+        },
+        {
+          "foreground": "#000081",
+          "style": "plain",
+          "template": "  {{ .Full }}",
+          "type": "lua"
+        },
+        {
+          "foreground": "#ec2729",
+          "style": "plain",
+          "template": "  {{ .Full }}",
+          "type": "java"
+        },
+        {
+          "foreground": "#06aad5",
+          "style": "plain",
+          "template": "  {{ .Full }}",
+          "type": "go"
+        },
+        {
+          "foreground": "#0d6da8",
+          "style": "plain",
+          "template": "  {{ .Full }}",
+          "type": "dotnet"
+        },
+        {
+          "foreground": "#01a300",
+          "style": "plain",
+          "template": " cmake {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "type": "cmake"
+        },
+        {
+          "foreground": "#000000",
+          "style": "plain",
+          "template": "  {{ .Full }}",
+          "type": "rust"
+        },
+        {
+          "foreground": "#6ec41f",
+          "style": "plain",
+          "template": "  {{ .Full }}",
+          "type": "python"
+        },
+        {
+          "foreground": "#0b7e07",
+          "style": "plain",
+          "template": "  {{ .Full }}  ",
+          "type": "node"
+        },
+        {
+          "style": "plain",
+          "foreground": "#c93838",
+          "template": "   {{ .Full }}",
+          "type": "npm"
+        },
+        {
+          "style": "plain",
+          "foreground": "#4b96d3",
+          "template": "  {{ .Context }}",
+          "type": "docker"
+        },
+        {
+          "foreground": "#243f8b",
+          "style": "plain",
+          "template": "  {{ .Name }}",
+          "type": "az"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#ffa1d0",
+          "leading_diamond": "<#8ec07c>╰<#8ec07c>─",
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "diamond",
+          "template": " <#8ec07c>",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}
