@@ -1,25 +1,50 @@
-. "$HOME/.atuin/bin/env"
-eval "$(atuin init zsh)"
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+zstyle ':omz:update' mode reminder # just remind me to update when it's time
 
-export PATH=$PATH:/home/art/.local/bin
+# CASE_SENSITIVE="true"
+# HYPHEN_INSENSITIVE="true" # Case-sensitive completion must be off. _ and - will be interchangeable.
+# DISABLE_MAGIC_FUNCTIONS="true"
+# DISABLE_LS_COLORS="true"
+# DISABLE_AUTO_TITLE="true"
+ENABLE_CORRECTION="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+# HIST_STAMPS="mm/dd/yyyy"
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
-# eval "$(oh-my-posh init zsh)"
-eval "$(oh-my-posh init zsh --config ~/omp.json)"
+plugins=(copyfile copypath dirhistory extract fasd dnf pass gitignore golang mercurial)
+    # command-not-found 
+    # common-aliases
+    # dircycle
+
+source $ZSH/oh-my-zsh.sh
+
+
+
+# Week from monday
+LC_TIME="en_GB.UTF-8"
 
 export QT_QPA_PLATFORM=xcb
 
-# Preferred editor for local and remote sessions
+# Atuin
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh)"
+# Jump
+[[ -s /home/art/.autojump/etc/profile.d/autojump.sh ]] && source /home/art/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
+# FASD
+eval "$(fasd --init posix-alias zsh-hook)"
+
+# Paths
+export PATH=$PATH:/home/art/.local/bin
+export PATH=$PATH:/usr/local/go/bin
+
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nvim'
 else
   export EDITOR='nvim'
 fi
 
-export PATH=$PATH:/usr/local/go/bin
-
-# Time from Monday
-LC_TIME="en_GB.UTF-8"
-
-eval $(thefuck --alias)
-
-alias bat='bat --theme=base16'
+alias zshconfig="nvim ~/.zshrc"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias bat="bat --theme=base16"
