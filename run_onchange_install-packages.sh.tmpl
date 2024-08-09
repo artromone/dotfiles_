@@ -1,4 +1,5 @@
 {{ if eq .chezmoi.os "linux" -}}
+#!/bin/sh
 sudo dnf in \
     git
 {{ else if eq .chezmoi.os "darwin" -}}
