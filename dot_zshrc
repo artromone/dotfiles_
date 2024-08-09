@@ -1,5 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
+ZSH_THEME="headline"
 zstyle ':omz:update' mode reminder # just remind me to update when it's time
 
 # CASE_SENSITIVE="true"
@@ -30,6 +30,7 @@ export QT_QPA_PLATFORM=xcb
 . "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)"
 # Jump
+unalias j
 [[ -s /home/art/.autojump/etc/profile.d/autojump.sh ]] && source /home/art/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
 # FASD
@@ -37,8 +38,8 @@ eval "$(fasd --init posix-alias zsh-hook)"
 
 # Paths
 export PATH=$PATH:/home/art/.local/bin
+export PATH=$PATH:/home/art/.cargo/bin
 export PATH=$PATH:/usr/local/go/bin
-
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nvim'
 else

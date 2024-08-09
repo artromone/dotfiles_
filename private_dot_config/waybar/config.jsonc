@@ -61,7 +61,7 @@
          "on-scroll-down":"shift_up"
       }
    },
-   "battery":{
+   "battery":{ 
       "states":{
          "good":95,
          "warning":30,
