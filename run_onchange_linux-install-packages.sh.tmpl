@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ "$(uname)" = "Linux" ]; then
+  dnf install -y \
+    {{ range .packages.linux.dnf -}}\
+    {{ . }}\
+    {{ end -}}
+fi

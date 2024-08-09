@@ -1,0 +1,25 @@
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh)"
+
+export PATH=$PATH:/home/art/.local/bin
+
+# eval "$(oh-my-posh init zsh)"
+eval "$(oh-my-posh init zsh --config ~/omp.json)"
+
+export QT_QPA_PLATFORM=xcb
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='nvim'
+else
+  export EDITOR='nvim'
+fi
+
+export PATH=$PATH:/usr/local/go/bin
+
+# Time from Monday
+LC_TIME="en_GB.UTF-8"
+
+eval $(thefuck --alias)
+
+alias bat='bat --theme=base16'
