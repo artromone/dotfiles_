@@ -12,10 +12,22 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # HIST_STAMPS="mm/dd/yyyy"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-plugins=(copyfile copypath dirhistory extract fasd dnf pass gitignore golang mercurial)
-    # command-not-found 
-    # common-aliases
-    # dircycle
+plugins=(
+    copyfile
+    copypath
+    dirhistory
+    extract
+    fasd
+    dnf
+    pass
+    gitignore
+    golang
+    mercurial
+    sudo
+    yum
+    command-not-found 
+    common-aliases
+)
 
 source $ZSH/oh-my-zsh.sh
 
