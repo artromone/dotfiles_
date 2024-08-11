@@ -52,6 +52,7 @@ eval "$(fasd --init posix-alias zsh-hook)"
 export PATH=$PATH:/home/art/.local/bin
 export PATH=$PATH:/home/art/.cargo/bin
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/home/art/go/bin
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nvim'
 else

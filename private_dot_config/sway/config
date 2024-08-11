@@ -13,6 +13,7 @@ set $rofi_cmd rofi \
 set $menu $rofi_cmd -show combi -combi-modes drun -modes combi
 # set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
+
 ### Output configuration
 output * bg ~/pictures/wallpapers/raccoon.jpg fill
 
@@ -30,6 +31,7 @@ output * bg ~/pictures/wallpapers/raccoon.jpg fill
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
+
 ### Input configuration
 input type:keyboard {
   xkb_layout "us,ru"
@@ -45,6 +47,7 @@ input type:touchpad {
 }
 
 bindsym $mod+Escape exec swaylock
+
 
 ### Key bindings
 
@@ -152,10 +155,8 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-### Screen utils:
-# bindsym $mod+Shift+S exec sway-interactive-screenshot
-# bindsym $mod+Shift+W exec sway-interactive-screenshot --video
 
+### Screen utils:
 # cd .local/bin && ln -s ~/.config/sway/sendtask.sh vjasendtask
 # bindsym Alt+Space exec "cd /home/art/.config/sway && sh sendtask.sh"
 
@@ -163,6 +164,7 @@ include '$(/usr/libexec/sway/layered-include \
     "/usr/share/sway/config.d/*.conf" \
     "/etc/sway/config.d/*.conf" \
     "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
+
 
 ### Window
 font pango: JetbrainsMono Nerd Font 12
@@ -178,7 +180,10 @@ hide_edge_borders --i3 none
 gaps inner 15
 smart_gaps on
 
+
 ### Window rules
+for_window [app_id="floating-terminal"] floating enable, resize set width 1000 height 700
+
 # for_window [title="(?:Open|Save) (?:File|Folder|As)"] floating enable, resize set width 1030 height 710
 
 # Run windows on start

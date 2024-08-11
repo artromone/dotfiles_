@@ -67,9 +67,12 @@
 #language,
 #mode,
 #privacy,
+#network,
+#bluetooth,
+#pulseaudio,
 #idle_inhibitor {
-	padding-left: 8pt;
-	padding-right: 8pt;
+	padding-left: 10pt;
+	padding-right: 10pt;
 }
 /* Each critical module */
 #mode,
