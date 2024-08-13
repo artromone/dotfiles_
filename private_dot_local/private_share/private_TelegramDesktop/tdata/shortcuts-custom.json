@@ -5,11 +5,11 @@
 [
     {
         "command": "close_telegram",
-        "keys": "Q"
+        "keys": "alt+Q"
     },
     {
         "command": "first_chat",
-        "keys": "g"
+        "keys": "alt+g"
     },
     {
         "command": "last_chat",
@@ -17,18 +17,18 @@
     },
     {
         "command": "previous_folder",
-        "keys": "h"
+        "keys": "alt+h"
     },
     {
         "command": "next_folder",
-        "keys": "l"
+        "keys": "alt+l"
     },
     {
         "command": "previous_chat",
-        "keys": "k"
+        "keys": "alt+k"
     },
     {
         "command": "next_chat",
-        "keys": "j"
+        "keys": "alt+j"
     }
 ]
