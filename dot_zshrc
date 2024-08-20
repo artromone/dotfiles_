@@ -32,10 +32,6 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 
-
-# Week from monday
-LC_TIME="en_GB.UTF-8"
-
 export QT_QPA_PLATFORM=xcb
 
 # Atuin
@@ -47,11 +43,13 @@ unalias j
 autoload -U compinit && compinit -u
 # FASD
 eval "$(fasd --init posix-alias zsh-hook)"
+
 # Paths
 export PATH=$PATH:/home/art/.local/bin
 export PATH=$PATH:/home/art/.cargo/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/art/go/bin
+
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='nvim'
 else
