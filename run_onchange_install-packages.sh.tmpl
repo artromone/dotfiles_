@@ -1,5 +1,13 @@
 {{ if eq .chezmoi.os "linux" -}}
-#!/bin/sh
-sudo dnf in \
-    git
+
+
+#!/bin/bash
+
+PACKAGE_LIST="packages_list.txt"
+
+while read -r line; do
+    sudo dnf install $line -y
+done < "$PACKAGE_LIST"
+
+
 {{ end -}}
