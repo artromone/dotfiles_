@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Obsidian
+Exec=/home/art/bin/Obsidian-1.6.7.AppImage %U
+Terminal=false
+Type=Application
+StartupWMClass=obsidian
+MimeType=x-scheme-handler/obsidian;
